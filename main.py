@@ -116,7 +116,7 @@ async def send_message(message: types.Message):
     await message.delete()
 
 
-@dp.message_handler(content_types=['parser'])
+@dp.message_handler(content_types=["text"])
 async def send_parser(message: types.Message):
     if message.text.lower() in "parser":
         await bot.send_message(message.from_user.id, list_of_pc[0])
