@@ -122,7 +122,7 @@ async def send_parser(message: types.Message):
         await bot.send_message(message.from_user.id, list_of_pc[0])
         del list_of_pc[0]
     else:
-        await bot.send_message(message.from_user.id, "Не привильно написано")
+        await bot.send_message(message.from_user.id, "Не правильно написано")
 
 
 @dp.message_handler(content_types=["sticker"])
